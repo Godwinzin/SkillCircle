@@ -15,9 +15,14 @@
 }
 
 .nav-links {
-  display: flex;
+  display: none; /* on small screens these live in the drawer */
   align-items: center;
   gap: var(--space-4);
+}
+
+@media (min-width: 64rem) {
+  .nav-menu { display: none; }
+  .nav-links { display: flex; }
 }
 
 .nav-links a:not(.btn) {

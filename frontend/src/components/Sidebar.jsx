@@ -5,7 +5,7 @@ import { useAuth } from "../hooks/useAuth";
 import Brand from "./Brand";
 
 export default function Sidebar({ open, onClose }) {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   const { pathname } = useLocation();
   const [searchParams] = useSearchParams();
   const [categories, setCategories] = useState([]);
@@ -128,6 +128,18 @@ export default function Sidebar({ open, onClose }) {
                   >
                     Settings
                   </Link>
+                </li>
+                <li className="drawer-only">
+                  <button
+                    type="button"
+                    className="sidebar-link sidebar-button"
+                    onClick={() => {
+                      signOut();
+                      onClose();
+                    }}
+                  >
+                    Log out
+                  </button>
                 </li>
               </>
             ) : (
