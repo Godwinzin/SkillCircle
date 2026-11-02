@@ -49,7 +49,7 @@
   --container: 76rem;
 }
 
-/* Dark mode: only the colors change, because everything uses the variables */
+/* Dark mode: only the colors change, because everything uses the variables
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #0b1020;
@@ -80,7 +80,7 @@
     --syntax-comment: #94a3b8;
     --syntax-title: #93c5fd;
   }
-}
+} */
 
 /* ========== 2. Reset and base ========== */
 *,
